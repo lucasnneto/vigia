@@ -1,8 +1,8 @@
 [[build.buildpacks]]
-uri = "https://github.com/heroku/heroku-buildpack-google-chrome"
+uri = "heroku/nodejs"
 
 [[build.buildpacks]]
 uri = "heroku/nodejs-yarn"
 
 [[build.buildpacks]]
-uri = "heroku/nodejs"
+uri = "https://github.com/heroku/heroku-buildpack-google-chrome"
