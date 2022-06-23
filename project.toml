@@ -1,2 +1,2 @@
 [[build.buildpacks]]
-uri = "https://github.com/heroku/heroku-buildpack-chromedriver"
+uri = "https://github.com/heroku/heroku-buildpack-google-chrome"
