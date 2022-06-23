@@ -5,4 +5,4 @@ uri = "heroku/nodejs"
 uri = "heroku/nodejs-yarn"
 
 [[build.buildpacks]]
-uri = "https://github.com/heroku/heroku-buildpack-google-chrome"
+uri = "https://github.com/heroku/heroku-buildpack-chromedriver"
