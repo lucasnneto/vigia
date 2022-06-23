@@ -1,8 +1,10 @@
 const { Builder, Browser, By } = require("selenium-webdriver");
 const { Options } = require("selenium-webdriver/chrome");
+require("chromedriver");
 
 module.exports = async function () {
   const opt = new Options();
+
   opt.addArguments("--headless");
   opt.addArguments(
     "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36 Edg/102.0.1245.41"
