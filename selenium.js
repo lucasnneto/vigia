@@ -1,6 +1,5 @@
 const { Builder, Browser, By } = require("selenium-webdriver");
-const { Options } = require("selenium-webdriver/chrome");
-require("chromedriver");
+const { Options, ServiceBuilder } = require("selenium-webdriver/chrome");
 
 module.exports = async function () {
   const opt = new Options();
@@ -9,8 +8,10 @@ module.exports = async function () {
   opt.addArguments(
     "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36 Edg/102.0.1245.41"
   );
+  const serviceBuilder = new ServiceBuilder(process.env.CHROMEDRIVER_PATH);
   const navegador = new Builder()
     .forBrowser(Browser.CHROME)
+    .setChromeService(serviceBuilder)
     .setChromeOptions(opt)
     .build();
   try {
